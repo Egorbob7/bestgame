@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class NewBehaviourScript : MonoBehaviour
+public class ReloadOnEscape : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
@@ -12,11 +12,12 @@ public class NewBehaviourScript : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Escape))
+       private void Update()
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-                }
-    }
+            if (Input.GetKeyDown(KeyCode.Escape))
+            {
+                SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            }
+        }
+    
 }
